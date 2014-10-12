@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Builds Overview</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <script src="/javascript/moment.min.js" type="text/javascript"></script>
+    <script src="/javascript/moment-timezone-with-data.min.js" type="text/javascript"></script>
+    <script src="/javascript/mustache.min.js" type="text/javascript"></script>
+    <script src="/javascript/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="/javascript/status.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="header">
+      <img src="/images/jenkins.png" class="jenkins">
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+    <div id="footer">
+      Based on the
+      <a href="https://wiki.jenkins-ci.org/display/JENKINS/Build+Monitor+Plugin">Jenkins Monitor Plugin</a>
+    </div>
+  </body>
+</html>

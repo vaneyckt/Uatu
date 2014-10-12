@@ -1,0 +1,63 @@
+h1 {
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-family: "Open sans", Verdana, Helvetica, sans serif;
+  margin: 10px auto 15px auto;
+}
+
+body {
+  background: url("/images/background.png");
+}
+
+#footer {
+  color: #dddddd;
+  text-align: right;
+  font-size: 70%;
+  width: 100%;
+}
+
+.jenkins {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 50px;
+  height: 69px;
+  z-index: 2;
+}
+
+a:link {
+  color: #73BFFF;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #73BFFF;
+  text-decoration: none;
+}
+
+.success {
+  color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  padding: 10px 5px 10px 5px;
+  font-size: 1.3em;
+  text-align: center;
+  font-family: Verdana, Helvetica, sans serif;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  background-color: #00BA2F;
+}
+
+.failure {
+  color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  padding: 10px 5px 10px 5px;
+  font-size: 1.3em;
+  text-align: center;
+  font-family: Verdana, Helvetica, sans serif;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  background-color: #D10D0D;
+}

@@ -1,0 +1,20 @@
+---
+auth:
+  - my login
+  - my password
+builds:
+  - release-71:
+    - release-71
+    - r71
+  - release-72:
+    - release-72
+    - r72
+  - release-73:
+    - release-73
+    - r73
+  - iam-metrics:
+    - 6520-iam-reporting-metrics
+    - r0.6520
+  - user-acquisition:
+    - 6636-user-acquisition-report
+    - r0.6636

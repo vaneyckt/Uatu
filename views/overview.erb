@@ -1,0 +1,23 @@
+<table width="100%">
+  <tr>
+    <th><h1>Jenkins</h1></th>
+    <th><h1>CD Stack</h1></th>
+  </tr>
+  <% @builds.each do |build| %>
+    <% build.each do |build_name, identifiers| %>
+      <tr class="cards" data-build-name="<%= build_name %>" data-jenkins-identifier="<%= identifiers[0] %>" data-cd-identifier="<%= identifiers[1] %>">
+        <td width="50%"></td>
+        <td width="50%"></td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+
+<script id="template" type="x-tmpl-mustache">
+  <div class={{ klass }}>
+    {{ text }}
+  </div>
+</script>
+
+<input type="hidden" id="login" value="<%= @auth[0] %>">
+<input type="hidden" id="passw" value="<%= @auth[1] %>">
