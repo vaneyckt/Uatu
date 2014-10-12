@@ -4,7 +4,7 @@ $(function () {
 
   function startAllJenkinsWorkers() {
     $.each($("table tr.cards"), function(index, elem) {
-      var buildName         = $(elem).data("build-name");
+      var buildName = $(elem).data("build-name");
       var jenkinsIdentifier = $(elem).data("jenkins-identifier");
 
       startJenkinsWorker(buildName, jenkinsIdentifier);
@@ -15,7 +15,7 @@ $(function () {
     $.ajax({
       url: "http://<jenkins url>/job/" + jenkinsIdentifier + "/api/json?depth=1&jsonp=?",
       dataType: "jsonp",
-      beforeSend: function (xhr) {
+      beforeSend: function(xhr) {
         xhr.setRequestHeader("Authentication", "Basic " + btoa(login + ":" + passw));
       },
       success: function(data) {
@@ -33,13 +33,13 @@ $(function () {
     $.ajax({
       url: "http://<other jenkins url>/job/<job name>/api/json?depth=1&jsonp=?",
       dataType: "jsonp",
-      beforeSend: function (xhr) {
+      beforeSend: function(xhr) {
         xhr.setRequestHeader("Authentication", "Basic " + btoa(login + ":" + passw));
       },
       success: function(data) {
         $.each($("table tr.cards"), function(index, elem) {
-          var buildName         = $(elem).data("build-name");
-          var cdIdentifier      = $(elem).data("cd-identifier");
+          var buildName = $(elem).data("build-name");
+          var cdIdentifier = $(elem).data("cd-identifier");
 
           for(var i = 0; i < data.builds.length; i++) {
             if(data.builds[i].fullDisplayName.indexOf(cdIdentifier) > -1 && data.builds[i].result !== null) {
